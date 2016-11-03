@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="nome_triangolo" class="it.alfasoft.andrea.InizializzazioneLista.it.Triangolo">
+
+		<property name="punti">		<!-- name fa riferimento al nome della lista che ho in triangolo -->
+
+			<list>
+				<ref bean="puntoA" />
+				<ref bean="puntoB" />
+				<ref bean="p3" />
+
+
+			</list>
+
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="puntoA" class="it.alfasoft.andrea.InizializzazioneLista.it.Punto">
+
+		<property name="x" value="10"></property>
+		<property name="y" value="10"></property>
+
+	</bean>
+
+	<bean id="puntoB" class="it.alfasoft.andrea.InizializzazioneLista.it.Punto">
+
+		<property name="x" value="20"></property>
+		<property name="y" value="20"></property>
+
+	</bean>
+
+	<bean id="p3" class="it.alfasoft.andrea.InizializzazioneLista.it.Punto">
+
+		<property name="x" value="30"></property>
+		<property name="y" value="30"></property>
+
+	</bean>
+
+</beans>          

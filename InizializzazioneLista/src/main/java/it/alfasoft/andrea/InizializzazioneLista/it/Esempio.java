@@ -1,4 +1,4 @@
-package it.alfasoft.andrea.InnerBeanAndAlias;
+package it.alfasoft.andrea.InizializzazioneLista.it;
 
 
 import org.springframework.context.ApplicationContext;
@@ -11,9 +11,10 @@ public class Esempio {
 	
 		 ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
 		 
-		   Triangolo t=(Triangolo) context.getBean("tria");
+		   Triangolo t=(Triangolo) context.getBean("nome_triangolo");
 		   
 		   t.stampaVertici();
+		  
 		   
 	}
 
