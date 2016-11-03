@@ -18,3 +18,9 @@ public class Esempio {
 	}
 
 }
+
+
+/*The Spring container can autowire relationships between collaborating beans without using <constructor-arg> 
+ * and <property> elements which helps cut down on the amount of XML configuration you 
+ * write for a big Spring based application.
+ */
