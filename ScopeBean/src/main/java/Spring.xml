@@ -4,7 +4,8 @@
 
 <beans>
 
-    <bean id="triangolo3"   class="it.alfasoft.andrea.ScopeBean.Triangolo" autowire="byName"  scope="prototype"/>
+<!--     <bean id="triangolo3"   class="it.alfasoft.andrea.ScopeBean.Triangolo" autowire="byName"  scope="prototype"/> -->
+    <bean id="triangolo3"   class="it.alfasoft.andrea.ScopeBean.Triangolo" autowire="byName"  scope="singleton"/>
 
 <!-- con scope="prototype" ogni volta che chiamo mi crea un nuovo oggetto. -->
 <!-- con scope="singleton" punto sempre allo stesso    -->

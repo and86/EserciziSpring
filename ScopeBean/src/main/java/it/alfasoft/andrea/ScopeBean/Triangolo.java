@@ -62,7 +62,8 @@ public class Triangolo implements ApplicationContextAware,BeanNameAware{
 
  ApplicationContext context;
 
-	@Override
+// Mi permette di ottenere un reference ad application contenxt	
+ @Override
 	public void setApplicationContext(ApplicationContext context)
 			throws BeansException {
 		this.context=context;
@@ -70,11 +71,11 @@ public class Triangolo implements ApplicationContextAware,BeanNameAware{
 	}
 
 
-
+//Setta il nome del bean
 	@Override
 	public void setBeanName(String bean) {
 		
-		System.out.println(bean);
+		System.out.println(bean+" :Nome bean settato");
 		
 	}
 
