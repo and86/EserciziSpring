@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+          <bean id="triangolo"   class="it.alfasoft.andrea.AutoWire.Triangolo" autowire="byType" />
+          
+<!-- utilizzando byName il nome dell'id deve essere uguale al nome dell'attributo -->
+<!-- utilizzando byType in triangolo posso avere un solo attributo -->
+          
+          
+            <bean id="punto1"   class="it.alfasoft.andrea.AutoWire.Punto">
+ <!--             <bean id="puntoA"   class="it.alfasoft.andrea.AutoWire.Punto"> -->   <!-- per byName -->
+               <property name="x" value="10"></property>
+               <property name="y" value="10"></property>
+          
+            </bean>
+            
+<!--                <bean id="puntoB"   class="it.alfasoft.andrea.AutoWire.Punto"> -->
+            
+<!--                <property name="x" value="20"></property> -->
+<!--                <property name="y" value="20"></property> -->
+          
+<!--             </bean> -->
+            
+<!--                <bean id="puntoC"   class="it.alfasoft.andrea.AutoWire.Punto"> -->
+            
+<!--                <property name="x" value="30"></property> -->
+<!--                <property name="y" value="30"></property> -->
+          
+<!--             </bean> -->
+            
+  </beans>          
