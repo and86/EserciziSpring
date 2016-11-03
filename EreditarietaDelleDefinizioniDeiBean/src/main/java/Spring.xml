@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+    <bean id="triangoloPadre"   class="it.alfasoft.andrea.EreditarietaDeiBean.Triangolo" abstract="true">
+
+<!--     Non posso istanziare il bean triangoloPadre perchè l'ho definito come astratto; When a definition is abstract ,  -->
+<!--     it is usable only as a pure template bean definition that serves as a parent definition for child definitions. -->
+              
+              <property name="puntoA" ref="p1"/>
+    </bean>
+          
+          <bean id="triangoloFiglio"   class="it.alfasoft.andrea.EreditarietaDeiBean.Triangolo" parent="triangoloPadre" >
+
+<!--     you indicate a child bean definition by using the parent attribute, specifying the parent 
+		bean as the value of this attribute. -->
+              
+              <property name="puntoB" ref="p2"/>
+              <property name="puntoC" ref="p3"/>
+    </bean>  
+          
+          
+            <bean id="p1"   class="it.alfasoft.andrea.EreditarietaDeiBean.Punto" >
+            
+               <property name="x" value="10"></property>
+               <property name="y" value="10"></property>
+          
+            </bean>
+            
+               <bean id="p2"   class="it.alfasoft.andrea.EreditarietaDeiBean.Punto">
+            
+               <property name="x" value="20"></property>
+               <property name="y" value="20"></property>
+          
+            </bean>
+            
+               <bean id="p3"   class="it.alfasoft.andrea.EreditarietaDeiBean.Punto" >
+            
+               <property name="x" value="30"></property>
+               <property name="y" value="30"></property>
+          
+            </bean>
+            
+  </beans>          
